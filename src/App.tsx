@@ -4,8 +4,22 @@ import { IoLogoInstagram } from "react-icons/io"
 import Title from "./components/Title"
 import Skills from "./components/Skills"
 import Divide from "./components/Divide"
+import Button from "./components/Button"
+import Allapps from "./components/works/Allapps"
+import { useState } from "react"
+import WebApps from "./components/works/WebApps"
+import MobileApps from "./components/works/MobileApps"
+import OthersApps from "./components/works/OthersApps"
 
+const componentProject = [
+  <Allapps />,
+  <WebApps />,
+  <MobileApps />,
+  <OthersApps />,
+]
 function App() {
+  const [projectsValue, setProjectsValue] = useState(0)
+
 
   return (
     <>
@@ -23,12 +37,12 @@ function App() {
 
             <nav>
               <ul className="flex gap-x-14">
-                <li><a href="" className="">Home</a></li>
-                <li><a href="">sobre</a></li>
-                <li><a href="">portifólio</a></li>
-                <li><a href="">serviços</a></li>
-                <li><a href="">resumo</a></li>
-                <li><a href="">contato</a></li>
+                <li><a href="" className="hover:text-gray-900">Home</a></li>
+                <li><a href="" className="hover:text-gray-900">sobre</a></li>
+                <li><a href="" className="hover:text-gray-900">portifólio</a></li>
+                <li><a href="" className="hover:text-gray-900">serviços</a></li>
+                <li><a href="" className="hover:text-gray-900">resumo</a></li>
+                <li><a href="" className="hover:text-gray-900">contato</a></li>
               </ul>
             </nav>
           </div>
@@ -107,9 +121,26 @@ function App() {
         {/* init Meu portifolio */}
         <section className=" bg-gray-100">
           <div className="mx-20 p-4">
+
             <div className="my-10 flex items-end">
-                <Title firstTitle="Meu" secondTitle="Portifólio" brState={true}/>
-                <p className="font-bold  text-lg pl-20 ">Estes são alguns dos trabalhos e  <br /> projetos que já realizei</p>
+              <Title firstTitle="Meu" secondTitle="Portifólio" brState={true} />
+              <p className="font-bold  text-md pl-20 ">Estes são alguns dos trabalhos e  <br /> projetos que já realizei</p>
+            </div>
+
+            <div>
+              {/* buttons */}
+
+              <div className="flex gap-x-4  my-5">
+                <Button text="Todos" color={projectsValue === 0 ? "primary" : "secondary"} onClick={() => setProjectsValue(0)} type="button" />
+                <Button text="Web App" color={projectsValue === 1 ? "primary" : "secondary"} onClick={() => setProjectsValue(1)} type="button" />
+                <Button text="Mobile App" color={projectsValue === 2 ? "primary" : "secondary"} onClick={() => setProjectsValue(2)} type="button" />
+                <Button text="Outros" color={projectsValue === 3 ? "primary" : "secondary"} onClick={() => setProjectsValue(3)} type="button" />
+              </div>
+            </div>
+            {/* end buttons */}
+            {/* init projects */}
+            <div className="flex flex-col  items-center my-5 text-gray-600 ">
+              {componentProject[projectsValue]}
             </div>
           </div>
         </section>
