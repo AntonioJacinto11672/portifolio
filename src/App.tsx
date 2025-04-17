@@ -3,15 +3,16 @@ import { FaGithub } from "react-icons/fa6"
 import { IoLogoInstagram } from "react-icons/io"
 import Title from "./components/Title"
 import Skills from "./components/Skills"
+import Divide from "./components/Divide"
 
 function App() {
 
   return (
     <>
-      <main className="bg-[#E5E5E5] text-gray-600">
+      <main className=" bg-gray-300 text-gray-600 mx-40">
 
         <header className="bg-gray-100 flex flex-col">
-          <div className="flex justify-between items-center px-4 mx-44 my-3 ">
+          <div className="flex justify-between items-center px-2 mx-20 my-3 ">
 
             <div className="flex gap-1 items-center ">
               <div className="w-10 h-10  flex justify-center items-center">
@@ -32,7 +33,7 @@ function App() {
             </nav>
           </div>
 
-          <div className="header-content flex  justify-between mx-44 p-4 mt-10 mb-10">
+          <div className="header-content flex  justify-between mx-20 p-4 mt-10 mb-10">
             <div className="about-me-header flex flex-col justify-between items-start">
               <div className="text-gray-600">
                 <p className="font-semibold">Olá pessoal,</p>
@@ -53,16 +54,11 @@ function App() {
             </div>
           </div>
         </header>
-        <div className="divide  p-2 mx-44">
-          <div>
-            <p className="text-gray-600  font-semibold text-lg">
-              About Me
-            </p>
-          </div>
-        </div>
+
+        <Divide title="Sobre min" />
 
         <section className=" bg-gray-100">
-          <div className="mx-44 p-4">
+          <div className="mx-20 p-4">
             {/* init title description */}
             <div className="flex flex-col gap-y-2 items-center my-5 text-gray-600">
               <div className="h-[150px] w-[155px] rounded-4xl border-4 border-gray-500 overflow-hidden ">
@@ -84,25 +80,36 @@ function App() {
             <div className="py-14">
               <div className="flex flex-col gap-y-2 items-center my-5 text-gray-600">
                 <Title firstTitle="Hard" secondTitle="Skills" />
-                <div className="flex gap-x-7 justify-between text-gray-600">
+                <div className="flex gap-x-14 justify-between text-gray-600">
                   <Skills title="HTML" positiveStarNumber={5} negativeStarNumber={0} />
                   <Skills title="CSS" positiveStarNumber={4} negativeStarNumber={1} />
                   <Skills title="JavaScript" positiveStarNumber={4} negativeStarNumber={1} />
                   <Skills title="Php" positiveStarNumber={3} negativeStarNumber={2} />
                 </div>
-                <div className="flex gap-x-7 justify-between text-gray-600">
+                <div className="flex gap-x-14 justify-between text-gray-600">
                   <Skills title="Node" positiveStarNumber={3} negativeStarNumber={2} />
                   <Skills title="React" positiveStarNumber={3} negativeStarNumber={2} />
                   <Skills title="React Native" positiveStarNumber={3} negativeStarNumber={2} />
                   <Skills title="Laravel" positiveStarNumber={2} negativeStarNumber={3} />
                 </div>
-                <div className="flex gap-x-7 justify-between text-gray-600">
+                <div className="flex gap-x-14 justify-between text-gray-600">
                   <Skills title="Mysql" positiveStarNumber={3} negativeStarNumber={2} />
                   <Skills title="postgress" positiveStarNumber={2} negativeStarNumber={3} />
                   <Skills title="MongoDB" positiveStarNumber={1} negativeStarNumber={4} />
                   <Skills title="SCSS" positiveStarNumber={2} negativeStarNumber={3} />
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        {/* End Skills  */}
+        <Divide title="Meus Projectos" />
+        {/* init Meu portifolio */}
+        <section className=" bg-gray-100">
+          <div className="mx-20 p-4">
+            <div className="my-10 flex items-end">
+                <Title firstTitle="Meu" secondTitle="Portifólio" brState={true}/>
+                <p className="font-bold  text-lg pl-20 ">Estes são alguns dos trabalhos e  <br /> projetos que já realizei</p>
             </div>
           </div>
         </section>

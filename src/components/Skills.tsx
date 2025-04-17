@@ -1,4 +1,3 @@
-import { useState } from "react";
 import NegativeStar from "./NegativeStar";
 import PositiveStar from "./PositiveStar";
 
@@ -25,11 +24,11 @@ function Skills({ title, positiveStarNumber, negativeStarNumber }: skillsProps) 
 
     return (
         <div className="flex flex-col gap-y-2 items-center my-5 text-gray-600">
-            <h2 className=" font-bold text-3xl text-gray-600"> {title} </h2>
-            <div className="flex  gap-y-2  gap-x-1 items-center  text-gray-600">
+            <h2 className=" font-bold text-2xl text-gray-600"> {title} </h2>
+            <div className="flex  gap-y-2  gap-x-1 items-center  text-gray-600 justify-between">
 
-                {
-                    starComponents.map((star, index) => {
+                { 
+                    starComponents.map((star) => {
                         return (
                             <div className="">
                                 {star}
