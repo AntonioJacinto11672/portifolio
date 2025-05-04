@@ -45,12 +45,12 @@ function App() {
             {/* Desktop Nav */}
             <nav className="hidden md:block">
               <ul className="flex gap-5 lg:gap-8 text-sm lg:text-base">
-                <li><a href="#" className="hover:text-gray-600">Home</a></li>
-                <li><a href="#" className="hover:text-gray-600">Sobre</a></li>
-                <li><a href="#" className="hover:text-gray-600">Portfólio</a></li>
-                <li><a href="#" className="hover:text-gray-600">Serviços</a></li>
-                <li><a href="#" className="hover:text-gray-600">Resumo</a></li>
-                <li><a href="#" className="hover:text-gray-600">Contato</a></li>
+                <li><a href="#home" className="hover:text-gray-600">Home</a></li>
+                <li><a href="#about" className="hover:text-gray-600">Sobre</a></li>
+                <li><a href="#portifolio" className="hover:text-gray-600">Portfólio</a></li>
+                <li><a href="#service" className="hover:text-gray-600">Serviços</a></li>
+                <li><a href="#resume" className="hover:text-gray-600">Resumo</a></li>
+                <li><a href="#social-icons" className="hover:text-gray-600">Contato</a></li>
               </ul>
             </nav>
 
@@ -89,13 +89,14 @@ function App() {
                 <h2 className="uppercase font-bold text-2xl md:text-3xl lg:text-4xl">Eu sou um<br />programador</h2>
                 <p className="font-semibold">Seja bem-vindo ao meu portfólio website</p>
               </div>
-              <button className="py-2 px-4 bg-gray-900 dark:bg-gray-800 hover:bg-gray-600 text-white text-sm font-semibold rounded-2xl">
+              <button className="py-2 px-4 bg-gray-900 dark:bg-gray-800 hover:bg-gray-600 text-white text-sm font-semibold rounded-2xl" onClick={() => window.open("https://www.canva.com/design/DAFkA7X8MrQ/VPVWBlE6Y54VkuyAvkLsww/edit?utm_content=DAFkA7X8MrQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton", "_blank")}>
                 Saiba mais sobre mim
               </button>
-              <div className="flex justify-center lg:justify-start gap-4">
-                <FaGithub size={22} />
-                <FaLinkedinIn size={22} />
-                <IoLogoInstagram size={22} />
+              <div className="flex justify-center lg:justify-start gap-4" id="social-icons">
+                <a href="http://github.com/AntonioJacinto11672" target="_blank" rel="noopener noreferrer"><FaGithub size={22} /></a>
+                <a href="http://www.linkedin.com/in/ant%C3%B3nio-jacinto-14119022a/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn size={22} /></a>
+                <a href="http://https://www.instagram.com/antonio_jacinto11672/" target="_blank" rel="noopener noreferrer"><IoLogoInstagram size={22} /></a>
+
               </div>
             </div>
 
@@ -107,7 +108,7 @@ function App() {
         </header>
         <Divide title="Sobre min" />
 
-        <section className="bg-gray-100 dark:bg-gray-900">
+        <section className="bg-gray-100 dark:bg-gray-900" id="about">
           <div className="px-4 sm:px-6 lg:px-20 xl:px-40 py-4">
             {/* Title Description */}
             <div className="flex flex-col gap-y-4 items-center my-5 text-gray-600 dark:text-gray-400 text-center">
@@ -116,9 +117,9 @@ function App() {
               </div>
               <Title firstTitle="António" secondTitle="Jacinto" />
               <p className="font-semibold max-w-3xl">
-                My name is António José Jacinto of Luanda - Angola, I'm from Angola, Viana/Luanda.
-                I am a student of Systems Analysis and Development at the University of Luanda.
-                I am passionate about technology and programming.
+                Meu nome é António José Jacinto, de Luanda - Angola, Viana/Luanda.
+                Sou estudante de Engenharia Informática na Universidade Lusiádas de Angola.
+                Sou apaixonado por tecnologia e programação.
               </p>
             </div>
 
@@ -152,7 +153,7 @@ function App() {
         {/* End Skills  */}
         <Divide title="Meus Projectos" />
         {/* init Meu portifolio */}
-        <section className="bg-gray-100 dark:bg-gray-900 px-4 sm:px-6 lg:px-20">
+        <section className="bg-gray-100 dark:bg-gray-900 px-4 sm:px-6 lg:px-20" id="portifolio">
           <div className="p-4">
             {/* Título e descrição */}
             <div className="my-10 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4">
@@ -179,7 +180,7 @@ function App() {
 
 
         <Divide title="Minhas techs" />
-        <section className="bg-gray-100 dark:bg-gray-900">
+        <section className="bg-gray-100 dark:bg-gray-900" id="service">
           <div className="px-4 sm:px-6 lg:px-20 py-20 flex flex-col gap-y-16 items-center text-gray-600 dark:text-gray-400">
 
             <div className="mx-auto">
@@ -241,28 +242,27 @@ function App() {
 
               {/* Card 1 */}
               <div className="bg-gray-800 text-white p-6 rounded-lg w-full sm:w-80 text-center shadow-md mt-4 md:mt-16">
-                <h3 className="text-lg font-bold text-gray-300 mb-2">Cargo</h3>
+                <h3 className="text-lg font-bold text-gray-300 mb-2">Web desgner - Itel Center Code</h3>
                 <p className="text-sm">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                  trabalhei como web desgner, desenvolvendo sites responsivos e otimizados para SEO.
+                  <br /> Utilizando HTML, CSS e JavaScript.
+                 
                 </p>
               </div>
 
               {/* Card 2 */}
               <div className="bg-gray-600 text-white p-6 rounded-lg w-full sm:w-80 text-center shadow-md mt-0 md:mt-2">
-                <h3 className="text-lg font-bold text-gray-300 mb-2">Cargo</h3>
+                <h3 className="text-lg font-bold text-gray-300 mb-2">Front End - Tribunal de Comarca de Luanda</h3>
                 <p className="text-sm">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                 Trabelhei como Front End, desenvolvendo aplicações web utilizando Wordpress, e php
                 </p>
               </div>
 
               {/* Card 3 */}
               <div className="bg-gray-800 text-white p-6 rounded-lg w-full sm:w-80 text-center shadow-md border-2 mt-4 md:mt-16">
-                <h3 className="text-lg font-bold text-gray-300 mb-2">Cargo</h3>
+                <h3 className="text-lg font-bold text-gray-300 mb-2">Help Desk - Suporte Técnico </h3>
                 <p className="text-sm">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                  Atualmente presto serviços de suporte técnico, ajudando os usuários a resolver problemas relacionados a hardware e software.
                 </p>
               </div>
             </div>
