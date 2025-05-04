@@ -1,0 +1,18 @@
+p{
+	margin: 5px;
+}
+
+.container {
+	margin: 20px;
+  display:flex;
+  flex-wrap: wrap;
+	gap: 10px 20px;
+}
+
+.pentagon-1 {
+	position: relative;
+	width: 157.5px;
+	height: 150px;
+	background: #4169e1;
+	clip-path: polygon( 50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+}
