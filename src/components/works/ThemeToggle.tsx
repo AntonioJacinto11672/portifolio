@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
 
 export default function ThemeToggle() {
-    const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    const [theme, setTheme] = useState<'dark' | 'light'>(() => {
         if (typeof window === 'undefined') return 'dark';
         const stored = localStorage.getItem('theme');
         if (stored === 'dark' || stored === 'light') return stored;
@@ -19,7 +19,7 @@ export default function ThemeToggle() {
     return (
         <button
             aria-label="Toggle Dark Mode"
-            className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700"
+            className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 cursor-pointer"
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         >
             {theme === 'dark' ? <FaSun size={20} /> : <FaMoon size={20} />}
