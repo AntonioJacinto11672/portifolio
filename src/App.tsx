@@ -113,7 +113,7 @@ function App() {
             {/* Title Description */}
             <div className="flex flex-col gap-y-4 items-center my-5 text-gray-600 dark:text-gray-400 text-center">
               <div className="h-36 w-36 rounded-3xl border-4 border-gray-500 overflow-hidden">
-                <img src="IMG_0007.JPEG" alt="Foto de perfil" className="object-cover h-full w-full" />
+                <img src="foto.jpeg" alt="Foto de perfil" className="object-cover h-full w-full" />
               </div>
               <Title firstTitle="António" secondTitle="Jacinto" />
               <p className="font-semibold max-w-3xl">
