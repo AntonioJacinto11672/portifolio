@@ -29,7 +29,7 @@ function App() {
 
   return (
     <>
-      <main className="overflow-hidden dark:bg-gray-800 bg-gray-300 text-gray-600  dark:text-gray-400 px-4 sm:px-6 lg:px-20 xl:px-40 max-w-screen-xl mx-auto">
+      <main className="overflow-hidden text-gray-600  dark:text-gray-400 px-4 sm:px-6 lg:px-20 xl:px-40 max-w-screen-xl mx-auto">
         <header className="bg-gray-100 dark:bg-gray-900 flex flex-col  shadow-md">
           {/* Top Bar */}
           <div className="flex justify-between items-center px-4 lg:px-20 py-4">
